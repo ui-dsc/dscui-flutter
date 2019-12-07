@@ -1,6 +1,5 @@
-import 'package:english_words/english_words.dart' as prefix0;
+import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
-import 'package:english_words/english_words.dart'; // Add this line.
 
 void main() => runApp(MaterialApp(
       home: MyApp(),
@@ -28,7 +27,7 @@ class _RandomWordState extends State<RandomWord> {
 
         int index = i ~/ 2;
         if (index >= _suggestions.length) {
-          _suggestions.addAll(prefix0.generateWordPairs().take(10));
+          _suggestions.addAll(generateWordPairs().take(10));
         }
         return _buildRow(_suggestions[index]);
       },
